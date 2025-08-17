@@ -48,7 +48,7 @@ function analyzeSalesData(data, options) {
     if(!data
         || !Array.isArray(data.sellers)
         || !Array.isArray(data.products)
-        || !Array.isArray(data.purchase_records) // receipts? 
+        || !Array.isArray(data.purchase_records)
         || data.sellers.length === 0
     ) {
         throw new Error('Некорректные входные данные');
@@ -130,7 +130,7 @@ function analyzeSalesData(data, options) {
 
     // @TODO: Сортировка продавцов по прибыли
 
-    sellerStats.sort((a, b) => a.profit - b.profit);
+    sellerStats.sort((a, b) => b.profit - a.profit);
 
     // @TODO: Назначение премий на основе ранжирования
 

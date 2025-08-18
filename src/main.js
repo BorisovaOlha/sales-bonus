@@ -133,7 +133,6 @@ function analyzeSalesData(data, options) {
     sellerStats.sort((a, b) => b.profit - a.profit);
 
     // @TODO: Назначение премий на основе ранжирования
-
     // Формируем топ-10 товаров
     // Массив объектов вида: { "sku": "SKU_008","quantity": 10}, топ-10 товаров продавца
 
@@ -157,5 +156,3 @@ function analyzeSalesData(data, options) {
         bonus: +seller.bonus.toFixed(2)// Число с двумя знаками после точки, бонус продавца
     }));    
 }
-
-console.log(analyzeSalesData(data, { calculateRevenue: calculateSimpleRevenue, calculateBonus: calculateBonusByProfit }));
